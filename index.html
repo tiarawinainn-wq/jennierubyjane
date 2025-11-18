@@ -1,43 +1,33 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Background Foto + Transparan + Teks</title>
+    <title>Jennie Kim</title>
 
     <style>
-        * {
+        body {
             margin: 0;
             padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            height: 100vh;
+            min-height: 100vh;
             background: url('foto.jpg') center/cover no-repeat;
             position: relative;
-            font-family: Arial;
+            font-family: Arial, sans-serif;
         }
 
-        /* Layer hitam transparan */
         .overlay {
             position: absolute;
             inset: 0;
-            background: rgba(0, 0, 0, 0.3); /* ubah 0.6 kalau mau lebih transparan */
-            backdrop-filter: blur(3px); /* opsional buat efek kaca */
+            background: rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(3px);
         }
 
-        /* Teks di depan */
         .content {
-            position: absolute;
-            inset: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-            color: white;
-            text-align: center;
+            position: relative;
             z-index: 10;
+            text-align: center;
+            padding: 40px;
+            color: white;
         }
 
         .content h1 {
@@ -47,6 +37,36 @@
 
         .content p {
             font-size: 22px;
+            line-height: 1.6;
+            max-width: 900px;
+            margin: auto;
+        }
+
+        /* 🌸 RESPONSIVE UNTUK HP */
+        @media (max-width: 600px) {
+
+            body {
+                background-position: center;
+            }
+
+            .content {
+                padding: 20px;
+            }
+
+            .content h1 {
+                font-size: 28px;
+            }
+
+            .content p {
+                font-size: 16px;
+                padding: 0 10px;
+                text-align: center;
+            }
+
+            .overlay {
+                background: rgba(0, 0, 0, 0.45);
+                backdrop-filter: blur(2px);
+            }
         }
     </style>
 </head>
@@ -55,19 +75,20 @@
     <div class="overlay"></div>
 
     <div class="content">
-        <h1>Jennie kim? Jendeuki</h1>
-        <p>Smart, Creative, Inspiring</p>
-        <p>Jendeuki always give me motivation for learning, for growing, and for achieving my dreams.</p>
-        <p>even i always crying on my study journey, i always find strength in her inspiration.</p>
-        <P>I always find comfort in her words and actions.</P>
-        <p>at the sometime if i crying in my room cause i really hard to learning i always remember to keep going and never give up</p>
-        <p>Because i want to meet my goals and make her proud.</p>
-        <p> i want to meet with jennie, i want she now that`s i got my goals because of her inspiration.</p>
-        <p>i love you jendeuki, thank you for everything.</p>
-        <p>i promise to meet you someday.</p>
-        <p>from your biggest fan.</p>
-        <p>with love -Tiara Wina Indriani</p>
+        <h1>Jennie Kim? Jendeuki</h1>
+        <p>
+            Smart, Creative, Inspiring.<br><br>
+            Jendeuki always give me motivation for learning, for growing, and for achieving my dreams.
+            even i always crying on my study journey, i always find strength in her inspiration.<br><br>
+            at the sometime if i crying in my room cause i really hard to learning i always remember to keep going and never give up
+            Because i want to meet my goals and make her proud.<br><br>
+            i want to meet with jennie, i want she now that’s i got my goals because of her inspiration.
+            i love you jendeuki, thank you for everything.<br><br>
+            i promise to meet you someday.<br>
+            from your biggest fan.<br>
+            with love -Tiara Wina Indriani
+        </p>
     </div>
-
 </body>
 </html>
+
